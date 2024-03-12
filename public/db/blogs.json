@@ -1,0 +1,22 @@
+[
+  {
+    "id": "101",
+    "cover": "https://i.ibb.co/BgZH9DH/Rectangle-1-2.png",
+    "title": "How to became a web developer from scratch",
+    "author_avatar": "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "author_name": "Stive Smith",
+    "posted_date": "01 Jan 2024",
+    "read_time": 25,
+    "tags": ["#beginners", "#roadmap", "#developer"]
+  },
+  {
+    "id": "102",
+    "cover": "https://i.ibb.co/PWTFQhG/Rectangle-1-3.png",
+    "title": "Core concept of javascript for beginners",
+    "author_avatar": "https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "author_name": "Steve Harvey",
+    "posted_date": "05 Jan 2024",
+    "read_time": 15,
+    "tags": ["#beginners", "#javascript", "#developer"]
+  }
+]
