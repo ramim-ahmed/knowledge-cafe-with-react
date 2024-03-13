@@ -18,19 +18,24 @@ export default function App() {
     fetchBlogs();
   }, []);
 
-  const handleMarkReadBlog = (id, title, readTime) => {
-    setMarkBookLists([...markBookLists, { id, title }]);
-    setReadTime((prev) => prev + readTime);
+  const handleMarkReadBlog = (id, title, read_time) => {
+    setMarkBookLists([...markBookLists, { id, title, read_time }]);
+    setReadTime((prev) => prev + read_time);
   };
   const removeMarkAsReadList = (id) => {
     const filterAbleProducts = markBookLists.filter((list) => list.id !== id);
+    const spentTime = filterAbleProducts.reduce((total, current) => {
+      return total + current.read_time;
+    }, 0);
+    setReadTime(spentTime);
     setMarkBookLists([...filterAbleProducts]);
   };
+
   return (
     <div className="max-w-4xl mx-auto">
       <Header />
-      <div className="grid grid-cols-12 gap-6 mt-8">
-        <div className="col-span-8">
+      <div className="grid grid-cols-12 gap-6 mt-8 px-3">
+        <div className="md:col-span-8 col-span-12">
           <Blogs>
             <>
               {blogs?.map((blog) => (
@@ -43,7 +48,7 @@ export default function App() {
             </>
           </Blogs>
         </div>
-        <div className="col-span-4">
+        <div className="md:col-span-4 col-span-12">
           <BookMarks
             markBookLists={markBookLists}
             removeMarkAsReadList={removeMarkAsReadList}
